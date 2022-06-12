@@ -79,6 +79,167 @@ const nav = get(".nav"),
         }
 
 
+function getInputName(){
+    /* INPUT NAME */
+    const inputName = document.createElement("input");
+    inputName.setAttribute("type", "text");
+    inputName.setAttribute("placeholder", "Name");
+    inputName.classList.add("form-control");
+
+    const div1 = document.createElement("div");
+    div1.classList.add("form-group");
+    div1.appendChild(inputName);
+
+    const div2 = document.createElement("div");
+    div2.classList.add("form-item", "col-4", "padd-15");
+    div2.appendChild(div1);
+
+    return div2;
+}
+
+function getInputEmail(){
+    /* INPUT EMAIL */
+    const inputEmail = document.createElement("input");
+    inputEmail.setAttribute("type", "email");
+    inputEmail.setAttribute("placeholder", "Email");
+    inputEmail.classList.add("form-control");
+
+    const div3 = document.createElement("div");
+    div3.classList.add("form-group");
+    div3.appendChild(inputEmail);
+
+    const div4 = document.createElement("div");
+    div4.classList.add("form-item", "col-4", "padd-15");
+    div4.appendChild(div3);
+
+    return div4;
+}
+
+function getInputPhone(){
+    const inputNumber = document.createElement("input");
+    inputNumber.setAttribute("type", "text");
+    inputNumber.setAttribute("placeholder", "Telefonnummer");
+    inputNumber.classList.add("form-control");
+
+    const div5 = document.createElement("div");
+    div5.classList.add("form-group");
+    div5.appendChild(inputNumber);
+
+    const div6 = document.createElement("div");
+    div6.classList.add("form-item", "col-4", "padd-15");
+    div6.appendChild(div5);
+
+    return div6;
+}
+
+function getAddressName(){
+    /* INPUT ADDRESSNAME */
+    const inputAddressname = document.createElement("input");
+    inputAddressname.setAttribute("type", "text");
+    inputAddressname.setAttribute("placeholder", "Adressenavn");
+    inputAddressname.classList.add("form-control");
+
+    const div7 = document.createElement("div");
+    div7.classList.add("form-group");
+    div7.appendChild(inputAddressname);
+
+    const div8 = document.createElement("div");
+    div8.classList.add("form-item", "col-4", "padd-15");
+    div8.appendChild(div7);
+
+    return div8;
+}
+
+function getAddressNumber(){
+    /* INPUT ADDRESSNUMBER */
+    const inputAddressnumber = document.createElement("input");
+    inputAddressnumber.setAttribute("type", "text");
+    inputAddressnumber.setAttribute("placeholder", "Adressenummer");
+    inputAddressnumber.classList.add("form-control");
+
+    const div9 = document.createElement("div");
+    div9.classList.add("form-group");
+    div9.appendChild(inputAddressnumber);
+
+    const div10 = document.createElement("div");
+    div10.classList.add("form-item", "col-4", "padd-15");
+    div10.appendChild(div9);
+
+    return div10;
+}
+
+function getBirthdate(){
+    /* INPUT BIRTHDATE */
+    const inputBirthdate = document.createElement("input");
+    inputBirthdate.setAttribute("type", "date");
+    inputBirthdate.classList.add("form-control");
+
+    const div11 = document.createElement("div");
+    div11.classList.add("form-group");
+    div11.appendChild(inputBirthdate);
+
+    const div12 = document.createElement("div");
+    div12.classList.add("form-item", "col-4", "padd-15");
+    div12.appendChild(div11);
+
+    return div12;
+}
+
+let numberOfAddedForms = 0;
+
+
+function addToForm(){
+    numberOfAddedForms++;
+
+    /* MOTHER OF ALL DIVS */
+    const extraInput = get("#additionalPerson");
+
+
+    const h4 = document.createElement("h4");
+    h4.classList.add("padd-15", "form-sub-title");
+    const text = document.createTextNode("Deltager " + numberOfAddedForms + " : ");
+    h4.appendChild(text);
+
+    const divRow = document.createElement("div");
+    divRow.classList.add("row");
+    divRow.appendChild(h4);
+
+    const inputName = getInputName();
+    const inputEmail = getInputEmail();
+    const inputPhone = getInputPhone();
+    const inputAddressname = getAddressName();
+    const inputAddressnumber = getAddressNumber();
+    const inputBirthdate = getBirthdate();
+    
+    const divRow1 = document.createElement("div");
+    divRow1.classList.add("row");
+    divRow1.appendChild(inputName);
+    divRow1.appendChild(inputEmail);
+    divRow1.appendChild(inputPhone);
+
+    const divRow2 = document.createElement("div");
+    divRow2.classList.add("row");
+    divRow2.appendChild(inputAddressname);
+    divRow2.appendChild(inputAddressnumber);
+    divRow2.appendChild(inputBirthdate);
+
+    const divFinal = document.createElement("div");
+    divFinal.classList.add("contact-form", "padd-15");
+    divFinal.appendChild(divRow);
+    divFinal.appendChild(divRow1);
+    divFinal.appendChild(divRow2);
+
+    const divFinalFinal = document.createElement("div");
+    divFinalFinal.classList.add("row");
+    divFinalFinal.appendChild(divFinal);
+    extraInput.appendChild(divFinalFinal);
+    console.log(extraInput);
+}
+
+
+
+
+
 
 /* SUPPORT FUNCTIONS */
 function get(id){
