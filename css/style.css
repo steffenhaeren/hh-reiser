@@ -637,6 +637,85 @@ h3.my-profession {
     line-height: 25px;
 }
 
+.service h4{
+    font-size: 20px;
+    color: var(--text-black-900);
+    line-height: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--bg-black-50);
+}
+
+.service .contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+}
+
+.service .contact-form{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.service .contact-form .col-4{
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+
+.service .contact-form .col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.service .contact-form .col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.service .contact-form .form-item{
+    margin-bottom: 30px;
+}
+
+.service .contact-form .form-item .form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+
+.service .contact-form .form-item .form-control:focus{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.service .contact-form .form-item textarea.form-control{
+    height: 140px;
+}
+
+.service .contact-form .btn{
+    height: 50px;
+    padding: 0 50px;
+}
+
+#addPerson{
+    height: 30px;
+    font-size: 16px;
+    line-height: 25px;
+    width: 200px;
+}
+
+.service .form-sub-title{
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
 /* PORTFOLIO */
 .portfolio .container{
     padding-bottom: 40px;
@@ -811,6 +890,7 @@ h3.my-profession {
 
 @media (max-width: 767px){
     .contact .contact-form .col-6,
+    .service .contact-form .col-4,
     .contact .contact-info-item,
     .service .service-item,
     .portfolio .portfolio-item,
