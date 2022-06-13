@@ -81,10 +81,15 @@ const nav = get(".nav"),
 
 
 
+let numberOfAddedForms = 0;
+
+
+
 function getInputName(){
     /* INPUT NAME */
     const inputName = document.createElement("input");
     inputName.setAttribute("type", "text");
+    inputName.setAttribute("id", "personName" + numberOfAddedForms);
     inputName.setAttribute("placeholder", "Name");
     inputName.classList.add("form-control");
 
@@ -103,6 +108,7 @@ function getInputEmail(){
     /* INPUT EMAIL */
     const inputEmail = document.createElement("input");
     inputEmail.setAttribute("type", "email");
+    inputEmail.setAttribute("id", "personEmail" + numberOfAddedForms);
     inputEmail.setAttribute("placeholder", "Email");
     inputEmail.classList.add("form-control");
 
@@ -120,6 +126,7 @@ function getInputEmail(){
 function getInputPhone(){
     const inputNumber = document.createElement("input");
     inputNumber.setAttribute("type", "text");
+    inputNumber.setAttribute("id", "personPhone" + numberOfAddedForms);
     inputNumber.setAttribute("placeholder", "Telefonnummer");
     inputNumber.classList.add("form-control");
 
@@ -138,6 +145,7 @@ function getAddressName(){
     /* INPUT ADDRESSNAME */
     const inputAddressname = document.createElement("input");
     inputAddressname.setAttribute("type", "text");
+    inputAddressname.setAttribute("id", "personAddressName" + numberOfAddedForms);
     inputAddressname.setAttribute("placeholder", "Adressenavn");
     inputAddressname.classList.add("form-control");
 
@@ -156,6 +164,7 @@ function getAddressNumber(){
     /* INPUT ADDRESSNUMBER */
     const inputAddressnumber = document.createElement("input");
     inputAddressnumber.setAttribute("type", "text");
+    inputAddressnumber.setAttribute("id", "personAddressNumber" + numberOfAddedForms);
     inputAddressnumber.setAttribute("placeholder", "Adressenummer");
     inputAddressnumber.classList.add("form-control");
 
@@ -174,6 +183,7 @@ function getBirthdate(){
     /* INPUT BIRTHDATE */
     const inputBirthdate = document.createElement("input");
     inputBirthdate.setAttribute("type", "date");
+    inputBirthdate.setAttribute("id", "personBirthdate" + numberOfAddedForms);
     inputBirthdate.classList.add("form-control");
 
     const div11 = document.createElement("div");
@@ -186,8 +196,6 @@ function getBirthdate(){
 
     return div12;
 }
-
-let numberOfAddedForms = 0;
 
 
 function addToForm(){
@@ -253,6 +261,35 @@ function sendEmail() {
 	}).then(
 		message => alert("mail sent successfully")
 	);
+}
+
+
+
+function signUpGroup(){
+    const group = new Map();
+
+    group.set("Kontakt person", [
+          get("#personName0").value, 
+          get("#personEmail0").value, 
+          get("#personPhone0").value, 
+          get("#personAddressName0").value, 
+          get("#personAddressNumber0").value,
+          get("#personBirthdate0").value,
+          get("#personGroupName0").value,
+          get("#personExtra0").value]);
+
+
+    for (let i = 0; i < numberOfAddedForms +1; i++) {
+        group.set("Person " + i, [
+                get("#personName" + i).value,
+                get("#personEmail" + i).value,
+                get("#personPhone" + i).value,
+                get("#personAddressName" + i).value,
+                get("#personAddressNumber" + i).value,
+                get("#personBirthdate" + i).value]);
+    }
+
+    console.log(group);
 }
 
 
