@@ -79,6 +79,8 @@ const nav = get(".nav"),
         }
 
 
+
+
 function getInputName(){
     /* INPUT NAME */
     const inputName = document.createElement("input");
@@ -233,7 +235,24 @@ function addToForm(){
     divFinalFinal.classList.add("row");
     divFinalFinal.appendChild(divFinal);
     extraInput.appendChild(divFinalFinal);
-    console.log(extraInput);
+}
+
+
+
+
+/* SEND EMAIL */
+function sendEmail() {
+	Email.send({
+	Host: "smtp://smtp.mailtrap.io:2525",
+	Username : "e98f02cd093112:13d4357f9264f4",
+	Password : "Atomer343",
+	To : 'steffenhaeren@gmail.com',
+	From : "steffenhaeren@gmail.com",
+	Subject : "Hei",
+	Body : "<html><h2>HEISANN</h2></html>",
+	}).then(
+		message => alert("mail sent successfully")
+	);
 }
 
 
