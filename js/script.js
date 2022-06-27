@@ -80,13 +80,11 @@ const nav = get(".nav"),
 
 
 
-
+/*
 let numberOfAddedForms = 0;
 
-
-
 function getInputName(){
-    /* INPUT NAME */
+    /* INPUT NAME
     const inputName = document.createElement("input");
     inputName.setAttribute("type", "text");
     inputName.setAttribute("id", "personName" + numberOfAddedForms);
@@ -105,7 +103,7 @@ function getInputName(){
 }
 
 function getInputEmail(){
-    /* INPUT EMAIL */
+    /* INPUT EMAIL 
     const inputEmail = document.createElement("input");
     inputEmail.setAttribute("type", "email");
     inputEmail.setAttribute("id", "personEmail" + numberOfAddedForms);
@@ -124,6 +122,7 @@ function getInputEmail(){
 }
 
 function getInputPhone(){
+    /* INPUT PHONE
     const inputNumber = document.createElement("input");
     inputNumber.setAttribute("type", "text");
     inputNumber.setAttribute("id", "personPhone" + numberOfAddedForms);
@@ -142,7 +141,7 @@ function getInputPhone(){
 }
 
 function getAddressName(){
-    /* INPUT ADDRESSNAME */
+    /* INPUT ADDRESSNAME
     const inputAddressname = document.createElement("input");
     inputAddressname.setAttribute("type", "text");
     inputAddressname.setAttribute("id", "personAddressName" + numberOfAddedForms);
@@ -161,7 +160,7 @@ function getAddressName(){
 }
 
 function getAddressNumber(){
-    /* INPUT ADDRESSNUMBER */
+    /* INPUT ADDRESSNUMBER
     const inputAddressnumber = document.createElement("input");
     inputAddressnumber.setAttribute("type", "text");
     inputAddressnumber.setAttribute("id", "personAddressNumber" + numberOfAddedForms);
@@ -180,7 +179,7 @@ function getAddressNumber(){
 }
 
 function getBirthdate(){
-    /* INPUT BIRTHDATE */
+    /* INPUT BIRTHDATE
     const inputBirthdate = document.createElement("input");
     inputBirthdate.setAttribute("type", "date");
     inputBirthdate.setAttribute("id", "personBirthdate" + numberOfAddedForms);
@@ -201,7 +200,7 @@ function getBirthdate(){
 function addToForm(){
     numberOfAddedForms++;
 
-    /* MOTHER OF ALL DIVS */
+    /* MOTHER OF ALL DIVS
     const extraInput = get("#additionalPerson");
 
 
@@ -243,27 +242,7 @@ function addToForm(){
     divFinalFinal.classList.add("row");
     divFinalFinal.appendChild(divFinal);
     extraInput.appendChild(divFinalFinal);
-}
-
-
-
-
-/* SEND EMAIL */
-function sendEmail() {
-	Email.send({
-	Host: "smtp://smtp.mailtrap.io:2525",
-	Username : "e98f02cd093112:13d4357f9264f4",
-	Password : "Atomer343",
-	To : 'steffenhaeren@gmail.com',
-	From : "steffenhaeren@gmail.com",
-	Subject : "Hei",
-	Body : "<html><h2>HEISANN</h2></html>",
-	}).then(
-		message => alert("mail sent successfully")
-	);
-}
-
-
+} 
 
 function signUpGroup(){
     const group = new Map();
@@ -291,6 +270,38 @@ function signUpGroup(){
 
     console.log(group);
 }
+*/
+
+
+
+/* SEND EMAIL */
+function sendEmail() {
+    var templateParams = {
+        to_name: 'HH Reiser',
+        from_name: getE("seName").value,
+        from_email: getE("seEmail").value,
+        message: getE("seMessage").value,
+        subject: getE("seSubject").value
+    };
+
+    getE("seName").value = ""
+    getE("seEmail").value = ""
+    getE("seMessage").value = ""
+    getE("seSubject").value = ""
+
+    emailjs.send('service_7btefzb', 'template_0cjl2ps', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert("Meldingen er sendt!")
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert("Sending av meldling feilet!")
+    });
+}
+
+
+
+
 
 
 
@@ -300,6 +311,9 @@ function signUpGroup(){
 /* SUPPORT FUNCTIONS */
 function get(id){
     return document.querySelector(id);
+}
+function getE(id){
+    return document.getElementById(id);
 }
 function getAll(id){
     return document.querySelectorAll(id);
