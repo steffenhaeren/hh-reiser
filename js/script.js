@@ -80,6 +80,96 @@ const nav = get(".nav"),
 
 
 
+
+/* SEND EMAIL */
+function sendEmail() {
+    var templateParams = {
+        to_name: 'HH Reiser',
+        from_name: getE("seName").value,
+        from_email: getE("seEmail").value,
+        message: getE("seMessage").value,
+        subject: getE("seSubject").value
+    };
+
+    getE("seName").value = ""
+    getE("seEmail").value = ""
+    getE("seMessage").value = ""
+    getE("seSubject").value = ""
+
+    emailjs.send('service_7btefzb', 'template_0cjl2ps', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert("Meldingen er sendt!")
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert("Sending av meldling feilet!")
+    });
+}
+
+
+
+/* SIGN UP FOR TRIP */
+function signUpForTrip() {
+    var templateParams = {
+        to_name: 'HH Reiser',
+        name: getE("personName").value,
+        email: getE("personEmail").value,
+        phone: getE("personPhone").value,
+        addressName: getE("personAddressName").value,
+        addressNumber: getE("personAddressNumber").value,
+        postNumber: getE("personPostNumber").value,
+        trip: getE("personTrip").value,
+        birthdate: getE("personBirthdate").value,
+        groupname: getE("personGroupName").value,
+        extra: getE("personExtra").value
+    };
+
+    console.log(templateParams)
+
+    getE("personName").value = ""
+    getE("personEmail").value = ""
+    getE("personPhone").value = ""
+    getE("personAddressName").value = ""
+    getE("personAddressNumber").value = ""
+    getE("personPostNumber").value = ""
+    getE("personTrip").value = ""
+    getE("personBirthdate").value = ""
+    getE("personGroupName").value = ""
+    getE("personExtra").value = ""
+
+
+   emailjs.send('service_7btefzb', 'template_rn0ox68', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert("Meldingen er sendt!")
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert("Sending av meldling feilet!")
+    });
+}
+
+
+
+
+/* SUPPORT FUNCTIONS */
+function get(id){
+    return document.querySelector(id);
+}
+function getE(id){
+    return document.getElementById(id);
+}
+function getAll(id){
+    return document.querySelectorAll(id);
+}
+
+
+
+
+
+
+
+
+
 /*
 let numberOfAddedForms = 0;
 
@@ -266,47 +356,3 @@ function signUpGroup(){
 
 
 
-/* SEND EMAIL */
-function sendEmail() {
-    var templateParams = {
-        to_name: 'HH Reiser',
-        from_name: getE("seName").value,
-        from_email: getE("seEmail").value,
-        message: getE("seMessage").value,
-        subject: getE("seSubject").value
-    };
-
-    getE("seName").value = ""
-    getE("seEmail").value = ""
-    getE("seMessage").value = ""
-    getE("seSubject").value = ""
-
-    emailjs.send('service_7btefzb', 'template_0cjl2ps', templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-       alert("Meldingen er sendt!")
-    }, function(error) {
-       console.log('FAILED...', error);
-       alert("Sending av meldling feilet!")
-    });
-}
-
-
-
-
-
-
-
-
-
-
-/* SUPPORT FUNCTIONS */
-function get(id){
-    return document.querySelector(id);
-}
-function getE(id){
-    return document.getElementById(id);
-}
-function getAll(id){
-    return document.querySelectorAll(id);
-}

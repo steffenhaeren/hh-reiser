@@ -199,68 +199,81 @@
                         </div>
                         <!-- CONTACT FORM START -->
                         <div class="row">
-                            <h4 class="padd-15">Meld på din gruppe her : </h4>
-                        </div>
-                        <div class="row">
-                            <h5 class="padd-15 form-sub-title">
-                                Kontaktperson :
-                            </h5>
+                            <h4 class="padd-15">Meld deg på gruppetur : </h4>
                         </div>
                         <div class="row">
                             <div class="contact-form padd-15">
                                 <div class="row">
                                     <div class="form-item col-4 padd-15">
                                         <div class="form-group">
-                                            <input type="text" id="personName0" class="form-control" placeholder="Name">
+                                            <input type="text" id="personName" class="form-control" placeholder="Name">
                                         </div>
                                     </div>
                                     <div class="form-item col-4 padd-15">
                                         <div class="form-group">
-                                            <input type="email" id="personEmail0" class="form-control" placeholder="Email">
+                                            <input type="email" id="personEmail" class="form-control" placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="form-item col-4 padd-15">
                                         <div class="form-group">
-                                            <input type="text" id="personPhone0" class="form-control" placeholder="Telefonnummer">
+                                            <input type="text" id="personPhone" class="form-control" placeholder="Telefonnummer">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-4 padd-15">
                                         <div class="form-group">
-                                            <input type="text" id="personAddressName0" class="form-control" placeholder="Adressenavn">
+                                            <input type="text" id="personAddressName" class="form-control" placeholder="Adressenavn">
                                         </div>
                                     </div>
                                     <div class="form-item col-4 padd-15">
                                         <div class="form-group">
-                                            <input type="email" id="personAddressNumber0" class="form-control" placeholder="Adressenummer">
+                                            <input type="email" id="personAddressNumber" class="form-control" placeholder="Adressenummer">
                                         </div>
                                     </div>
                                     <div class="form-item col-4 padd-15">
                                         <div class="form-group">
-                                            <input type="text" id="personPostNumber0" class="form-control" placeholder="Postnummer">
+                                            <input type="text" id="personPostNumber" class="form-control" placeholder="Postnummer">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <h5 class="padd-15 form-sub-title">
+                                        Gruppetur :
+                                    </h5>
+                                </div>
+                                <div class="row">  
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <select id="personTrip" class="form-control" >
+                                                <option value="spania">Spania</option>
+                                                <option value="portugal">Portugal</option>
+                                                <option value="nederland">Nederland</option>
+                                                <option value="danmark">Danmark</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row">  
                                     <p class="form-sub-title padd-15">Fødselsdato : </p>
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <input type="date" id="personBirthdate0" class="form-control" id="" placeholder="Fødselsdato"></textarea>
+                                            <input type="date" id="personBirthdate" class="form-control" placeholder="Fødselsdato"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                     <div class="row">
                                         <div class="form-item col-12 padd-15">
                                             <div class="form-group">
-                                                <input type="text" id="personGroupName0" class="form-control" placeholder="Navn på gruppe">
+                                                <input type="text" id="personGroupName" class="form-control" placeholder="Navn på gruppe">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-item col-12 padd-15">
                                             <div class="form-group">
-                                                <textarea name="" id="personExtra0" class="form-control" id="" placeholder="Tilleggsinfo"></textarea>
+                                                <textarea name="" id="personExtra" class="form-control" id="" placeholder="Tilleggsinfo"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +285,7 @@
                                     </div> -->
                                     <div class="row">
                                         <div class="form-item col-4 padd-15">
-                                            <button class="btn" onclick="signUpGroup()">Meld på gruppe</button>
+                                            <button class="btn" onclick="signUpForTrip()">Meld deg på</button>
                                         </div>
                                         <div class="form-item col-4 padd-15">
                                             <div class="form-group">
