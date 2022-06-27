@@ -197,46 +197,38 @@ function getBirthdate(){
 }
 
 
-function addToForm(){
-    numberOfAddedForms++;
+//     const h4 = document.createElement("h4");
+//     h4.classList.add("padd-15", "form-sub-title");
+//     const text = document.createTextNode("Deltager " + numberOfAddedForms + " : ");
+//     h4.appendChild(text);
 
     /* MOTHER OF ALL DIVS
     const extraInput = get("#additionalPerson");
 
-
-    const h4 = document.createElement("h4");
-    h4.classList.add("padd-15", "form-sub-title");
-    const text = document.createTextNode("Deltager " + numberOfAddedForms + " : ");
-    h4.appendChild(text);
-
-    const divRow = document.createElement("div");
-    divRow.classList.add("row");
-    divRow.appendChild(h4);
-
-    const inputName = getInputName();
-    const inputEmail = getInputEmail();
-    const inputPhone = getInputPhone();
-    const inputAddressname = getAddressName();
-    const inputAddressnumber = getAddressNumber();
-    const inputBirthdate = getBirthdate();
+//     const inputName = getInputName();
+//     const inputEmail = getInputEmail();
+//     const inputPhone = getInputPhone();
+//     const inputAddressname = getAddressName();
+//     const inputAddressnumber = getAddressNumber();
+//     const inputBirthdate = getBirthdate();
     
-    const divRow1 = document.createElement("div");
-    divRow1.classList.add("row");
-    divRow1.appendChild(inputName);
-    divRow1.appendChild(inputEmail);
-    divRow1.appendChild(inputPhone);
+//     const divRow1 = document.createElement("div");
+//     divRow1.classList.add("row");
+//     divRow1.appendChild(inputName);
+//     divRow1.appendChild(inputEmail);
+//     divRow1.appendChild(inputPhone);
 
-    const divRow2 = document.createElement("div");
-    divRow2.classList.add("row");
-    divRow2.appendChild(inputAddressname);
-    divRow2.appendChild(inputAddressnumber);
-    divRow2.appendChild(inputBirthdate);
+//     const divRow2 = document.createElement("div");
+//     divRow2.classList.add("row");
+//     divRow2.appendChild(inputAddressname);
+//     divRow2.appendChild(inputAddressnumber);
+//     divRow2.appendChild(inputBirthdate);
 
-    const divFinal = document.createElement("div");
-    divFinal.classList.add("contact-form", "padd-15");
-    divFinal.appendChild(divRow);
-    divFinal.appendChild(divRow1);
-    divFinal.appendChild(divRow2);
+//     const divFinal = document.createElement("div");
+//     divFinal.classList.add("contact-form", "padd-15");
+//     divFinal.appendChild(divRow);
+//     divFinal.appendChild(divRow1);
+//     divFinal.appendChild(divRow2);
 
     const divFinalFinal = document.createElement("div");
     divFinalFinal.classList.add("row");
