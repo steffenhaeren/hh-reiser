@@ -201,100 +201,140 @@
                         <div class="row">
                             <h4 class="padd-15">Meld deg på gruppetur : </h4>
                         </div>
-                        <div class="row">
-                            <div class="contact-form padd-15">
+                            <form onsubmit="signUpForTrip()">
                                 <div class="row">
-                                    <div class="form-item col-4 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" id="personName" class="form-control" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="form-item col-4 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" id="personEmail" class="form-control" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="form-item col-4 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" id="personPhone" class="form-control" placeholder="Telefonnummer">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-item col-4 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" id="personAddressName" class="form-control" placeholder="Adressenavn">
-                                        </div>
-                                    </div>
-                                    <div class="form-item col-4 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" id="personAddressNumber" class="form-control" placeholder="Adressenummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-item col-4 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" id="personPostNumber" class="form-control" placeholder="Postnummer">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <h5 class="padd-15 form-sub-title">
-                                        Gruppetur :
-                                    </h5>
-                                </div>
-                                <div class="row">  
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <select id="personTrip" class="form-control" >
-                                                <option value="spania">Spania</option>
-                                                <option value="portugal">Portugal</option>
-                                                <option value="nederland">Nederland</option>
-                                                <option value="danmark">Danmark</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">  
-                                    <p class="form-sub-title padd-15">Fødselsdato : </p>
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <input type="date" id="personBirthdate" class="form-control" placeholder="Fødselsdato"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <div class="row">
-                                        <div class="form-item col-12 padd-15">
-                                            <div class="form-group">
-                                                <input type="text" id="personGroupName" class="form-control" placeholder="Navn på gruppe">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-item col-12 padd-15">
-                                            <div class="form-group">
-                                                <textarea name="" id="personExtra" class="form-control" id="" placeholder="Tilleggsinfo"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   <!-- <div id="additionalPerson"></div>
+                                    <div class="contact-form padd-15">
                                         <div class="row">
-                                        <div class="form-item col-12 padd-15">
-                                            <button type="button" onclick="addToForm()" id="addPerson" class="btn">Legg til deltager</button>
-                                        </div>
-                                    </div> -->
-                                    <div class="row">
-                                        <div class="form-item col-4 padd-15">
-                                            <button class="btn" onclick="signUpForTrip()">Meld deg på</button>
-                                        </div>
-                                        <div class="form-item col-4 padd-15">
-                                            <div class="form-group">
-                                                <div class="errorMessage"></div>
+                                            <div class="form-item col-4 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        id="personName" 
+                                                        class="form-control" 
+                                                        placeholder="Name"
+                                                        required
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="form-item col-4 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="email" 
+                                                        id="personEmail" 
+                                                        class="form-control" 
+                                                        placeholder="Epost" 
+                                                        required
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="form-item col-4 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        id="personPhone" 
+                                                        class="form-control" 
+                                                        placeholder="Telefonnummer" 
+                                                        pattern="/^[0-9]{8}$/" 
+                                                        required
+                                                    >
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="form-item col-4 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        id="personAddressName" 
+                                                        class="form-control" 
+                                                        placeholder="Adressenavn"
+                                                        required
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="form-item col-4 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        id="personAddressNumber" 
+                                                        class="form-control" 
+                                                        placeholder="Adressenummer"
+                                                        required
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="form-item col-4 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        id="personPostNumber" 
+                                                        class="form-control" 
+                                                        placeholder="Postnummer"
+                                                        pattern="^([0-9]{4})$"
+                                                        required
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <h5 class="padd-15 form-sub-title">
+                                                Gruppetur :
+                                            </h5>
+                                        </div>
+                                        <div class="row">  
+                                            <div class="form-item col-12 padd-15">
+                                                <div class="form-group">
+                                                    <select id="personTrip" class="form-control" >
+                                                        <option value="spania">Spania</option>
+                                                        <option value="portugal">Portugal</option>
+                                                        <option value="nederland">Nederland</option>
+                                                        <option value="danmark">Danmark</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">  
+                                            <p class="form-sub-title padd-15">Fødselsdato : </p>
+                                            <div class="form-item col-12 padd-15">
+                                                <div class="form-group">
+                                                    <input type="date" id="personBirthdate" class="form-control" placeholder="Fødselsdato"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="form-item col-12 padd-15">
+                                                    <div class="form-group">
+                                                        <input type="text" id="personGroupName" class="form-control" placeholder="Navn på gruppe">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-item col-12 padd-15">
+                                                    <div class="form-group">
+                                                        <textarea name="" id="personExtra" class="form-control" id="" placeholder="Tilleggsinfo"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <!-- <div id="additionalPerson"></div>
+                                                <div class="row">
+                                                <div class="form-item col-12 padd-15">
+                                                    <button type="button" onclick="addToForm()" id="addPerson" class="btn">Legg til deltager</button>
+                                                </div>
+                                            </div> -->
+                                            <div class="row">
+                                                <div class="form-item col-4 padd-15">
+                                                    <button type="submit" class="btn">Meld deg på</button>
+                                                </div>
+                                                <div class="form-item col-4 padd-15">
+                                                    <div class="form-group">
+                                                        <div class="errorMessage"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
-                        </div>
+                                </div>
+                            </form>
                         <!-- CONTACT FORM END -->
                     </div>
                 </section>
@@ -422,41 +462,61 @@
                             VI SVARER SNAREST  
                         </h4>
                         <!-- CONTACT FORM START -->
-                        <div class="row">
-                            <div class="contact-form padd-15">
-                                <div class="row">
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="seName" placeholder="Name">
+                        <form onsubmit="sendEmail()">
+                            <div class="row">
+                                <div class="contact-form padd-15">
+                                    <div class="row">
+                                        <div class="form-item col-6 padd-15">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="seName" placeholder="Navn" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-item col-6 padd-15">
+                                            <div class="form-group">
+                                                <input 
+                                                    type="email" 
+                                                    class="form-control" 
+                                                    id="seEmail" 
+                                                    placeholder="Epost" 
+                                                    required
+                                                >
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="seEmail" placeholder="Email">
+                                        <div class="row">
+                                            <div class="form-item col-12 padd-15">
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        class="form-control" 
+                                                        id="seSubject" 
+                                                        placeholder="Subject" 
+                                                        required
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-item col-12 padd-15">
+                                                <div class="form-group">
+                                                    <textarea 
+                                                        name="" 
+                                                        class="form-control" 
+                                                        id="seMessage" 
+                                                        placeholder="Message" 
+                                                        required
+                                                    ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-item col-12 padd-15">
+                                                <button type="submit" class="btn">Send epost</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="row">
-                                        <div class="form-item col-12 padd-15">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="seSubject" placeholder="Subject">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-item col-12 padd-15">
-                                            <div class="form-group">
-                                                <textarea name="" class="form-control" id="seMessage" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-item col-12 padd-15">
-                                            <button class="btn" onclick="sendEmail()">Send epost</button>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
+                            </form>
                         <!-- CONTACT FORM END -->
                     </div>
                 </section>
