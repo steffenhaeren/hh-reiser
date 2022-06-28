@@ -1,3 +1,7 @@
+console.log("Laget av Steffen Hæren \nSjekk ut GitHuben min! \nhttps://github.com/steffenhaeren")
+
+
+
 /* TYPING ANIMATION SCRIPT */
 var typed = new Typed(".typing",{
     strings:["", "ditt fotballag", "ditt håndballag", "ditt svømmelag", "din idrettsgruppe"],
